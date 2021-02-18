@@ -1,0 +1,38 @@
+﻿<Window x:Class="Act2_Reloj.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Act2_Reloj"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="100" Background="#f3f3f3">
+        <Border BorderBrush="#DDDDDD" Margin="150" BorderThickness="1" CornerRadius="8" ></Border>
+        <WrapPanel HorizontalAlignment="Center" Margin="35" >
+            <Label FontSize="20" Margin="10" FontFamily="Bahnschrift SemiLight" Foreground="Gray"  >MON</Label>
+            <Label FontSize="20" Margin="10" FontFamily="Bahnschrift SemiLight" Foreground="Gray" >TUE</Label>
+            <Label FontSize="20" Margin="10" FontFamily="Bahnschrift SemiLight" Foreground="Gray" >WED</Label>
+            <Label FontSize="20" Margin="10" FontFamily="Bahnschrift SemiLight" Foreground="Gray" >THU</Label>
+            <Label FontSize="20" Margin="10" FontFamily="Bahnschrift SemiLight" Foreground="Black">FRI</Label>
+            <Label FontSize="20" Margin="10" FontFamily="Bahnschrift SemiLight" Foreground="Gray" >SAT</Label>
+            <Label FontSize="20" Margin="10" FontFamily="Bahnschrift SemiLight" Foreground="Gray" >SUN</Label>
+        </WrapPanel>
+        <TextBlock FontSize="95" VerticalAlignment="Bottom" HorizontalAlignment="Center"> 12: 27: 40</TextBlock>
+        <TextBlock FontSize="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,0"> AM</TextBlock>
+        <TextBlock FontSize="25" VerticalAlignment="Bottom" HorizontalAlignment="Left"> &#x23F0;</TextBlock>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+      
+    </Grid>
+
+
+
+
+</Window>
