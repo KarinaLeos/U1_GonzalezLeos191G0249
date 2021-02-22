@@ -1,21 +1,24 @@
-﻿<Window x:Class="TableroDePuntuacion.MainWindow"
+﻿<Window x:Class="Act2_Tablero.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TableroDePuntuacion"
+        xmlns:local="clr-namespace:Act2_Tablero"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Ejercicio 2" Height="450" Width="800">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="70" ></Setter>
             <Setter Property="FontFamily" Value="Harry P"></Setter>
             <Setter Property="HorizontalAlignment" Value="Center"></Setter>
             <Setter Property="Foreground" Value="Beige"></Setter>
-            
+
         </Style>
     </Window.Resources>
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="http://www.defondos.com/images/wallpapers/vintage%20madera%20background%20wood%20wallpaper%20(61)-718948_800.jpeg"></ImageBrush>
+        </Grid.Background>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -39,10 +42,11 @@
         <TextBlock Grid.Row="3" Grid.Column="1" >15:06</TextBlock>
 
 
-        <Image Source="G.png" Grid.Row="2" Margin="5" Grid.RowSpan="2"></Image>
-        
-        <Image Source="S.png" Grid.Column="2" Grid.Row="2" Margin="5" Grid.RowSpan="2"></Image>
-        
+        <Image  Stretch="Uniform" Source="https://static.wikia.nocookie.net/esharrypotter/images/a/a3/Gryffindor_Pottermore.png/revision/latest?cb=20140922195249" Grid.Row="2" Margin="5" Grid.RowSpan="2"></Image>
+
+        <Image Stretch="Uniform" Source="https://static.wikia.nocookie.net/harrypotter/images/0/00/Slytherin_ClearBG.png/revision/latest?cb=20161020182557" Grid.Column="2" Grid.Row="2" Margin="5" Grid.RowSpan="2">
+            
+        </Image>
+
     </Grid>
 </Window>
-   
