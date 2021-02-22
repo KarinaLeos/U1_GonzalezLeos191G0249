@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Gryffindor_Pottermore.png" />
+    <None Remove="maderita.jpg" />
+    <None Remove="Slytherin_Pottermore.png" />
+    <None Remove="viejo-fondo-textura-madera-vintage_55716-1138.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Gryffindor_Pottermore.png" />
+    <Resource Include="maderita.jpg" />
+    <Resource Include="Slytherin_Pottermore.png" />
+    <Resource Include="viejo-fondo-textura-madera-vintage_55716-1138.jpg" />
+  </ItemGroup>
+
+</Project>
