@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MSA1.png" />
+    <None Remove="MSB.PNG" />
+    <None Remove="MSG1.png" />
+    <None Remove="MSN.PNG" />
+    <None Remove="MSR1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="MSA1.png" />
+    <Resource Include="MSB.PNG" />
+    <Resource Include="MSG1.png" />
+    <Resource Include="MSN.PNG" />
+    <Resource Include="MSR1.png" />
+  </ItemGroup>
+
+</Project>
