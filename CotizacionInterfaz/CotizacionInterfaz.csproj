@@ -6,14 +6,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Cesped.png" />
-    <None Remove="Pasto.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Cesped.png" />
-    <Resource Include="Pasto.png" />
-  </ItemGroup>
-
 </Project>

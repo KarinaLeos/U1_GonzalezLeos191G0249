@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Act7_Cotizacion
+namespace CotizacionInterfaz
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,5 +25,4 @@ namespace Act7_Cotizacion
             InitializeComponent();
         }
     }
-
-    }
+}

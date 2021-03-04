@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Act6_Publicidad", "Act5_Publicidad\Act6_Publicidad.csproj", "{93BD8A61-234B-4760-A417-A04945972698}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Act7_Cotizacion", "Act7_Cotizacion\Act7_Cotizacion.csproj", "{154EAC4D-D6EA-4046-98E6-9D4EA3D2F71A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Act7_Cotizacion", "Act7_Cotizacion\Act7_Cotizacion.csproj", "{154EAC4D-D6EA-4046-98E6-9D4EA3D2F71A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

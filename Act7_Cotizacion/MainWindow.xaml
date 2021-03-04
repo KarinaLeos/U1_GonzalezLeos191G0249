@@ -5,8 +5,134 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Act7_Cotizacion"
         mc:Ignorable="d"
-        Title="Cotizacion" Height="450" Width="800">
-    <Grid>
-
+        Title="Cotizacion"  Width="800" Height="450">
+    <Window.DataContext>
+        <local:PastoSintetico>
+            
+        </local:PastoSintetico>
+    </Window.DataContext>
+    
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Width" Value="150"></Setter>
+        </Style>
+       
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Foreground" Value="FloralWhite"></Setter>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Width" Value="100"></Setter>
+        </Style>
+        <Style TargetType="ComboBoxItem" >
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="FontWeight" Value="Bold"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="Label">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=rdbInsta, Path=IsChecked}" Value="True">
+                    <Setter Property="Content" Value="+$40.00"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <DockPanel>
+        
+        <TextBlock Margin="0,0,0,5" Foreground="Black" DockPanel.Dock="Top">Ingrese los datos para su cotizacion</TextBlock>
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Background="LavenderBlush" >
+            <StackPanel Margin="20" >
+                
+                <TextBlock Foreground="Black">Largo del terreno</TextBlock>
+                <TextBox   Text="{Binding LargoTerreno, UpdateSourceTrigger=PropertyChanged}"  ></TextBox>
+                <TextBlock Foreground="Black">Ancho del terreno</TextBlock>
+                <TextBox  Text="{Binding AnchoTerreno,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <WrapPanel HorizontalAlignment="Center" Margin="10,0,0,0">
+                    <RadioButton Name="rdbInsta" IsChecked="{Binding RequiereInstalacion, UpdateSourceTrigger=PropertyChanged}"> Instalacion</RadioButton>
+                    <RadioButton>Sin instalacion</RadioButton>
+                </WrapPanel>
+                <Label Width="100"></Label>
+                <TextBlock Foreground="Black" HorizontalAlignment="Left">Seleccione la altura del pasto:
+                <ComboBox  SelectedIndex="0" Text="{Binding AlturaCesped,UpdateSourceTrigger=PropertyChanged}">
+                    <ComboBoxItem>10 </ComboBoxItem>
+                    <ComboBoxItem>15 </ComboBoxItem>
+                    <ComboBoxItem>20 </ComboBoxItem>
+                    <ComboBoxItem>25 </ComboBoxItem>
+                    <ComboBoxItem>30 </ComboBoxItem>
+                    <ComboBoxItem>35 </ComboBoxItem>
+                    <ComboBoxItem>40 </ComboBoxItem>
+                    <ComboBoxItem>45 </ComboBoxItem>
+                    <ComboBoxItem>50 </ComboBoxItem>
+                    <ComboBoxItem>55 </ComboBoxItem>
+                    <ComboBoxItem>60 </ComboBoxItem>
+                    <ComboBoxItem>65 </ComboBoxItem>
+                </ComboBox>
+                </TextBlock>
+                <Image Source="/Pasto.png" Width="300" Margin="0,35,0,0"></Image>
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="1" Background="#239063">
+            <StackPanel>
+                <Border Background="DarkSlateGray" CornerRadius="5" Margin="5">
+                    <WrapPanel>
+                            <Label>&#128176;Metros cuadrados</Label>
+                        <Label Content="{Binding MetrosCuadrados}"></Label>
+                </WrapPanel>
+                 </Border>
+                <Border Background="DarkSlateGray" CornerRadius="5" Margin="5">
+                    <WrapPanel>
+                            <Label>&#128176; Costo Metros cuadrados</Label>
+                    <Label Content="{Binding Path=CostoMetroCuadrado, StringFormat={}{0:C}}"></Label>
+                </WrapPanel>
+        </Border>
+                <Border Background="DarkSlateGray" CornerRadius="5" Margin="5">
+                    <WrapPanel>
+                            <Label>&#128176; Costo De Instalacion</Label>
+                    <Label Content="{Binding Path=CostoInstalacion, StringFormat={}{0:C}}" ></Label>
+                </WrapPanel>
+                </Border>
+                <Border Background="DarkSlateGray" CornerRadius="5" Margin="5">
+                    <WrapPanel>
+                            <Label>&#128176; Subtotal</Label>
+                    <Label Content="{Binding Path=Subtotal,StringFormat={}{0:C} }"></Label>
+                </WrapPanel>
+                </Border>
+                <Border Background="DarkSlateGray" CornerRadius="5" Margin="5">
+                    <WrapPanel>
+                            <Label>&#128176; Descuento</Label>
+                    <Label Content="{Binding Path=Descuento, StringFormat=${0} }"></Label>
+                </WrapPanel>
+                </Border>
+                    <Border Background="DarkSlateGray" CornerRadius="5" Margin="5">
+                        <WrapPanel>
+                            <Label>&#128176;Total</Label>
+                            <Label Content="{Binding Path=Total, StringFormat=${0} }"></Label>
+                        </WrapPanel>
+                    </Border>
+                    <Label>Contactanos en nuestras redes</Label>
+                    <WrapPanel HorizontalAlignment="Center">
+                        <Button Width="100">&#9742;</Button>
+                        <Button Width="100">&#128231;</Button>
+                    </WrapPanel>
+                    <Label>Imprime tu cotizacion aqui</Label>
+                    <Button Width="100">&#x1F5A8;</Button>
+                </StackPanel>
+        </Border>
     </Grid>
+    </DockPanel>
+
+
+
 </Window>
