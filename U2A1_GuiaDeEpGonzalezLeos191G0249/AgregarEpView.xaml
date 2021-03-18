@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="U2A1_GuiaDeEpGonzalezLeos191G0249.AgregarEpView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:U2A1_GuiaDeEpGonzalezLeos191G0249"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Margin="5" Background="Black">
+
+            <TextBlock FontFamily="Arial Rounded MT Bold" FontSize="60" HorizontalAlignment="Center">INFORMACION</TextBlock>
+            <TextBlock Margin="0,10,0,5" >Num de Episodio</TextBlock>
+            <TextBox Text="{Binding Episodio.NumEp}"></TextBox>
+            <TextBlock>Temporada</TextBlock>
+            <TextBox Text="{Binding Episodio.Temporada}">
+            </TextBox>
+            <TextBlock>Titulo</TextBlock>
+            <TextBox Text="{Binding Episodio.Titulo}"></TextBox>
+            <TextBlock> Titulo doblado</TextBlock>
+            <TextBox Text="{Binding Episodio.TituloDoblado}"></TextBox>
+            <TextBlock >Trama</TextBlock>
+            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Height="48" Text="{Binding Episodio.Trama}"></TextBox>
+            <TextBlock Foreground="Red" Background="White" HorizontalAlignment="Center" Text="{Binding Error}" Width="100" Margin="0,5"></TextBlock>
+            <WrapPanel  Margin="0,10,0,0" HorizontalAlignment="Right">
+               
+                <Button Margin="0,0,5,0" Command="{Binding EditarCommand}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Modo}" Value="Editar">
+                                    <Setter Property="Visibility" Value="Visible"></Setter>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    Guardar</Button>
+                <Button  Margin="0,0,5,0" Command="{Binding AgregarCommand}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Modo}" Value="Agregar">
+                                    <Setter Property="Visibility" Value="Visible"></Setter>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    Agregar</Button>
+                <Button Background="#c83444" Foreground="White" Margin="0,0,0,0" Command="{Binding CancelarCommand}" >Volver</Button>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,59 @@
+﻿<Window x:Class="U2A1_GuiaDeEpGonzalezLeos191G0249.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:U2A1_GuiaDeEpGonzalezLeos191G0249"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" ResizeMode="CanResizeWithGrip">
+    <Window.DataContext>
+        <local:ListadoEpisodios x:Name="listadoEpisodios"></local:ListadoEpisodios>
+    </Window.DataContext>
+    <Grid>
+       
+        <DockPanel Background="black">
+            <TextBlock DockPanel.Dock="Top" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="40" HorizontalAlignment="Center"> The mandalorian</TextBlock>
+            <WrapPanel DockPanel.Dock="Bottom" HorizontalAlignment="Right">
+                <Button Command="{Binding MostrarAgregarCommand}" CommandParameter="Agregar">Agregar</Button>
+                <Button Click="Button_Click" >Eliminar</Button>
+                <Button Command="{Binding MostrarAgregarCommand}" CommandParameter="Editar">Modificar</Button>
+                
+            </WrapPanel>
+            
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".4*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Image Source="/fashionbaby.jpg" Margin="10" ></Image>
+                <DataGrid Margin="10" AutoGenerateColumns="False" Grid.Column="1" ItemsSource="{Binding ListaEpisodios}" SelectedItem="{Binding Episodio}" CanUserAddRows="False">
+                    <DataGrid.Columns> 
+                        <DataGridTextColumn IsReadOnly="True" Binding="{Binding NumEp}" Header="Numero" Width="auto"></DataGridTextColumn>
+                        <DataGridTextColumn IsReadOnly="True" Binding="{Binding Temporada}" Header="Temporada" Width="auto"></DataGridTextColumn>
+                        <DataGridTextColumn IsReadOnly="True" Binding="{Binding Titulo}" Header="Titulo Original" Width="auto"></DataGridTextColumn>
+                        <DataGridTextColumn IsReadOnly="True" Binding="{Binding TituloDoblado}" Header="Titulo doblado" Width="auto"></DataGridTextColumn>
+                        <DataGridTextColumn IsReadOnly="True" Binding="{Binding Trama}" Header="Trama" Width="auto"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+               
+            </Grid>
+
+        </DockPanel>
+        <local:AgregarEpView >
+            <local:AgregarEpView.Style>
+                <Style TargetType="UserControl">
+                    <Setter Property="Visibility" Value="Collapsed"></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VerUserControl}" Value="True">
+                            <Setter Property="Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </local:AgregarEpView.Style>
+        </local:AgregarEpView>
+
+    </Grid>
+    
+</Window>

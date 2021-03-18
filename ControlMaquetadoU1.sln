@@ -20,6 +20,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Act6_Publicidad", "Act5_Pub
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Act7_Cotizacion", "Act7_Cotizacion\Act7_Cotizacion.csproj", "{154EAC4D-D6EA-4046-98E6-9D4EA3D2F71A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U2A1_GuiaDeEpGonzalezLeos191G0249", "U2A1_GuiaDeEpGonzalezLeos191G0249\U2A1_GuiaDeEpGonzalezLeos191G0249.csproj", "{8903C179-0D33-42CF-9AEE-44C8C46637B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{154EAC4D-D6EA-4046-98E6-9D4EA3D2F71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{154EAC4D-D6EA-4046-98E6-9D4EA3D2F71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{154EAC4D-D6EA-4046-98E6-9D4EA3D2F71A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8903C179-0D33-42CF-9AEE-44C8C46637B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8903C179-0D33-42CF-9AEE-44C8C46637B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8903C179-0D33-42CF-9AEE-44C8C46637B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8903C179-0D33-42CF-9AEE-44C8C46637B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

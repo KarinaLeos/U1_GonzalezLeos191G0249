@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="GonzalezLeosU2_Act1GuiaDEpisodios.AgregarEpView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GonzalezLeosU2_Act1GuiaDEpisodios"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Margin="5" Background="Black">
+            
+            <TextBlock FontFamily="Mandalore Expanded" FontSize="70" HorizontalAlignment="Center">INFORMACION</TextBlock>
+            <TextBlock Margin="0,10,0,5">Num de Episodio</TextBlock>
+            <TextBox></TextBox>
+            <TextBlock>Temporada</TextBlock>
+            <ComboBox>
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+            </ComboBox>
+            <TextBlock>Titulo original</TextBlock>
+            <TextBox></TextBox>
+            <TextBlock> Titulo doblado</TextBlock>
+            <TextBox></TextBox>
+            <TextBlock >Trama</TextBlock>
+            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Height="48"></TextBox>
+            <WrapPanel Background="White" Margin="0,80,0,0">
+                <Button Width="100">Agregar</Button>
+                <Button Width="100" Background="#c83444" Foreground="White">Volver</Button>
+            </WrapPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
