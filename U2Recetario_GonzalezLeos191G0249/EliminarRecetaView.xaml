@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="U2Recetario_GonzalezLeos191G0249.EliminarRecetaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:U2Recetario_GonzalezLeos191G0249"
+             mc:Ignorable="d" 
+            Background="#50000000">
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+    <Border Background="#d07b24" Width="600" Height="200" BorderBrush="White" BorderThickness="5" Margin="50">
+        <StackPanel  Margin="10">
+            <Border CornerRadius="5"   BorderThickness="0,5">
+                <TextBlock Foreground="White" Background="#bf1f34" TextAlignment="Center" Padding="10" FontSize="20">Datos de la receta</TextBlock>
+            </Border>
+            <TextBlock FontSize="20" TextAlignment="Center" Foreground="White" Margin="10">¿Desea eliminar la receta "<TextBlock Text="{Binding Receta.Nombre}"></TextBlock>"?</TextBlock>
+
+            <WrapPanel HorizontalAlignment="Center" Margin="10">
+                <Button Margin="0,5,0,5" Cursor="Hand" Command="{Binding EliminarCommand}">&#10004;
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                                CornerRadius="9"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center">
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Margin="0,5,0,5" Cursor="Hand" Command="{Binding CambiarVistasCommand}" CommandParameter="{x:Static local:Vistas.Lista}">
+                    &#x274C;
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border 
+                                CornerRadius="9"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center">
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </WrapPanel>
+
+        </StackPanel>
+    </Border>
+</UserControl>
