@@ -9,7 +9,7 @@
    
     <Window.Resources>
         <Style TargetType="TextBlock">
-            <Setter Property="Foreground" Value="AntiqueWhite"></Setter>
+            
             <Setter Property="FontFamily" Value="Corbel"></Setter>
         </Style>
         <Style TargetType="Button">
@@ -34,7 +34,7 @@
         <Border CornerRadius="5"  BorderBrush="#343433" BorderThickness="0,3" Background="#333322">
         <DockPanel Background="#343433">
         <Border DockPanel.Dock="Top" BorderThickness="0,0,0,3" BorderBrush="#FFEE55" Margin="5,0">
-                    <TextBlock DockPanel.Dock="Top" FontSize="30" HorizontalAlignment="Center" FontFamily="Copperplate Gothic Bold" >Cinema Gourmet</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" FontSize="30" HorizontalAlignment="Center" FontFamily="Copperplate Gothic Bold" Foreground="FloralWhite" >Cinema <TextBlock  FontFamily="Blackadder ITC">Gourmet</TextBlock></TextBlock>
             
         </Border>
                 <ComboBox Width="100" Margin="5,5,0,0" DockPanel.Dock="Top" HorizontalAlignment="Left" Name="cmbFiltrado" SelectionChanged="cmbFiltrado_SelectionChanged" Foreground="Black"></ComboBox>
@@ -116,8 +116,8 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <UniformGrid Rows="2" Margin="0,0,10,0">
-                        <Image Source="{Binding Receta.PlatilloUrl}" Width="auto"></Image>
-                        <Image Source="{Binding Receta.PeliculaUrl}" Width="auto"></Image>
+                        <Image Source="{Binding Receta.PlatilloUrl}" Width="auto" Stretch="Uniform"></Image>
+                        <Image Source="{Binding Receta.PeliculaUrl}" Width="auto" Stretch="Uniform"></Image>
                     </UniformGrid>
                     <Grid Grid.Column="1">
                         <Grid.ColumnDefinitions>
@@ -125,25 +125,25 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <TextBlock >Nombre</TextBlock>
-                        <TextBlock  Grid.Column="1" Text="{Binding Receta.Nombre}"></TextBlock>
-                        <TextBlock  Grid.Row="1">Tiempo</TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Receta.Tiempo}"></TextBlock>
-                        <TextBlock Grid.Row="2">Dificultad</TextBlock>
-                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Receta.Dificultad}"></TextBlock>
-                        <TextBlock Grid.Row="3">Ingredientes</TextBlock>
-                        <TextBlock  Grid.Column="1" Grid.Row="3" Text="{Binding Receta.Ingredientes}"></TextBlock>
-                        <TextBlock Grid.Row="4">Prodecimiento</TextBlock>
-                        <TextBlock  Grid.Column="1" Grid.Row="4" Text="{Binding Receta.Procedimiento}"></TextBlock>
-                        <TextBlock Grid.Row="5" Text="{Binding Receta.Nota}">Notas</TextBlock>
-                        <TextBlock Grid.Row="5"   Grid.Column="1" Text="{Binding Receta.Nota}"></TextBlock>
+                        <TextBlock Foreground="FloralWhite" >Nombre</TextBlock>
+                        <TextBlock  Grid.Column="1" Text="{Binding Receta.Nombre}" Foreground="FloralWhite"></TextBlock>
+                        <TextBlock  Grid.Row="1" Foreground="FloralWhite">Tiempo</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Receta.Tiempo}" Foreground="FloralWhite"></TextBlock>
+                        <TextBlock Grid.Row="2" Foreground="FloralWhite">Dificultad</TextBlock>
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Receta.Dificultad}" Foreground="FloralWhite"></TextBlock>
+                        <TextBlock Grid.Row="3" Foreground="FloralWhite">Ingredientes</TextBlock>
+                        <TextBlock  Grid.Column="1" Grid.Row="3" Text="{Binding Receta.Ingredientes}" Foreground="FloralWhite" TextWrapping="Wrap" Margin="0,5,0,0"></TextBlock>
+                        <TextBlock Grid.Row="4" Foreground="FloralWhite">Prodecimiento</TextBlock>
+                        <TextBlock  Grid.Column="1" Grid.Row="4" Text="{Binding Receta.Procedimiento}" Foreground="FloralWhite"  TextWrapping="Wrap" Margin="0,5,0,0"></TextBlock>
+                        <TextBlock Grid.Row="5" Text="{Binding Receta.Nota}"  Foreground="FloralWhite">Notas</TextBlock>
+                        <TextBlock Grid.Row="5"   Grid.Column="1" Text="{Binding Receta.Nota}" Foreground="FloralWhite" TextWrapping="Wrap"></TextBlock>
                     </Grid>
                 </Grid>
             </DockPanel>

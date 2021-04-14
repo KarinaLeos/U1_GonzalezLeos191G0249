@@ -35,27 +35,30 @@
                 <RowDefinition Height="0.1*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid Margin="0,15">
-
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
                 <TextBlock Foreground="FloralWhite">Nombre</TextBlock>
-                <TextBox Margin="81,0,10,10" Text="{Binding Receta.Nombre}"/>
-                <WrapPanel Grid.Row="1">
-                    <TextBlock Foreground="FloralWhite" Margin="0,5,10,0">&#x23f0;</TextBlock>
+                <TextBox Margin="81,0,10,10"  Width="auto" Text="{Binding Receta.Nombre}"/>
+                <WrapPanel Grid.Row="1" HorizontalAlignment="Left">
+                    <TextBlock Foreground="FloralWhite" Margin="0,5,10,0" Width="120">&#x23f0;</TextBlock>
                     <TextBox Width="150" Grid.Row="1" Margin="0,5,0,0" Text="{Binding Receta.Tiempo}"></TextBox>
-                    <TextBlock Foreground="FloralWhite" Margin="10,5,10,0">Dificultad</TextBlock>
-                    <ComboBox Width="150" SelectedItem="{Binding Receta.Dificultad}" ItemsSource="{Binding ListaDificultad}">
-
+                    <TextBlock Foreground="FloralWhite" Margin="10,5,10,0" Width="125" >Dificultad</TextBlock>
+                    <ComboBox  Width="150" SelectedItem="{Binding Receta.Dificultad}" ItemsSource="{Binding ListaDificultad}">
+                        <ComboBox.Resources>
+                            <Style BasedOn="{StaticResource {x:Type ComboBoxItem}}" TargetType="{x:Type ComboBoxItem}" >
+                                <Setter Property="Foreground" Value="Black"></Setter>
+                            </Style>
+                        </ComboBox.Resources>
                     </ComboBox>
                 </WrapPanel>
-                <WrapPanel Grid.Row="2" HorizontalAlignment="Center">
-                    <TextBlock Foreground="FloralWhite" Margin="0,5,10,0">Imagen de platillo</TextBlock>
+                <WrapPanel Grid.Row="2" HorizontalAlignment="Left">
+                    <TextBlock Foreground="FloralWhite" Margin="0,5,10,0" Width="120">Imagen de platillo</TextBlock>
                     <TextBox Width="150" Grid.Row="1" Margin="0,5,0,0" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding Receta.PlatilloUrl}"></TextBox>
-                    <TextBlock Foreground="FloralWhite" Margin="10,5,10,0">Imagen de pelicula</TextBlock>
-                    <TextBox Width="150" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding Receta.PeliculaUrl}"></TextBox>
+                    <TextBlock Foreground="FloralWhite" Margin="10,5,10,0"  Width="125">Imagen de pelicula</TextBlock>
+                    <TextBox Width="150" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding Receta.PeliculaUrl}" Margin="0,5,10,0"></TextBox>
                 </WrapPanel>
             </Grid>
             <DockPanel  Grid.Row="1" Margin="10,0" >
