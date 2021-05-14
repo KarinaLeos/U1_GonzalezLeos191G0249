@@ -22,7 +22,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Act7_Cotizacion", "Act7_Cot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "U2A1_GuiaDeEpGonzalezLeos191G0249", "U2A1_GuiaDeEpGonzalezLeos191G0249\U2A1_GuiaDeEpGonzalezLeos191G0249.csproj", "{8903C179-0D33-42CF-9AEE-44C8C46637B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U2Recetario_GonzalezLeos191G0249", "U2Recetario_GonzalezLeos191G0249\U2Recetario_GonzalezLeos191G0249.csproj", "{54F4C07A-0079-4908-9532-09D3C7722458}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "U2Recetario_GonzalezLeos191G0249", "U2Recetario_GonzalezLeos191G0249\U2Recetario_GonzalezLeos191G0249.csproj", "{54F4C07A-0079-4908-9532-09D3C7722458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U3Diversown.Android", "U3Diversown\U3Diversown.Android\U3Diversown.Android.csproj", "{7546EF3B-5D6E-4521-B850-5905DDC49C57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U3Diversown", "U3Diversown\U3Diversown\U3Diversown.csproj", "{63B0CD9C-E6C7-4943-ADE5-1B80BDB73108}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +66,16 @@ Global
 		{54F4C07A-0079-4908-9532-09D3C7722458}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54F4C07A-0079-4908-9532-09D3C7722458}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54F4C07A-0079-4908-9532-09D3C7722458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7546EF3B-5D6E-4521-B850-5905DDC49C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7546EF3B-5D6E-4521-B850-5905DDC49C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7546EF3B-5D6E-4521-B850-5905DDC49C57}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7546EF3B-5D6E-4521-B850-5905DDC49C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7546EF3B-5D6E-4521-B850-5905DDC49C57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7546EF3B-5D6E-4521-B850-5905DDC49C57}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{63B0CD9C-E6C7-4943-ADE5-1B80BDB73108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B0CD9C-E6C7-4943-ADE5-1B80BDB73108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B0CD9C-E6C7-4943-ADE5-1B80BDB73108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B0CD9C-E6C7-4943-ADE5-1B80BDB73108}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

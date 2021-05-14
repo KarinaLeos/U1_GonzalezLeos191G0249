@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="U3Diversown.Informacion" BackgroundColor="#A0D568">
+
+
+    <Frame CornerRadius="10" BackgroundColor="#384e78" Margin="10">
+        <ScrollView>
+            <StackLayout >
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="White"></Setter>
+                        <Setter Property="FontFamily" Value="texto"></Setter>
+                        <Setter Property="FontSize" Value="Body"></Setter>
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+                <Label>Recordemos que las plantas son seres vivos que nacen, crecen, se reproducen y mueren. Las plantas pertenecen al reino vegetal. Se clasifican segun su tamaño</Label>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="arbol.png"></Image>
+                    <Label Grid.Row="1">
+                        <Label.Text>
+                            Son las plantas de mayor tamaño. Hay de variadas formas y tamaños. Poseen un único tallo, duro y leñoso. 
+                            Hay árboles de hojas caducas, las pierden en invierno para evitar el congelamiento. 
+                            Y los hay de hoja perenne, que renuevan sus hojas a lo largo del año, sin perderlas en invierno, por ejemplo el pino. 
+                            Pueden ser muy longevos.
+                        </Label.Text>
+                    </Label>
+                    <Image Source="abs.png" Grid.Column="1"></Image>
+                    <Label Grid.Row="1" Grid.Column="1">
+                        <Label.Text>
+                            Son vegetales más pequeños que los árboles. Sus ramas nacen desde el suelo. Poseen varios tallos, algunos leñosos y otros no. 
+                            Pueden ser de hoja caduca o perenne. 
+                            Hay una gran variedad de especies. Tienen una vida media.
+                        </Label.Text>
+                    </Label>
+                    <Image Source="hierba.png" Grid.Column="2"></Image>
+                    <Label Grid.Row="1" Grid.Column="2">
+                        <Label.Text>
+                            Son pequeñas plantas que sobresalen apenas del suelo. Su tallo es blando y flexible. En general son de corta vida. 
+                            Las herbáceas son cultivadas por el hombre con diversos fines, como alimento o adorno.
+                        </Label.Text>
+                    </Label>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </Frame>
+    
+</ContentPage>

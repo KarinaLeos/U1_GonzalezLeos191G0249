@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="U3Diversown.PestañasView"
+             NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False" BackgroundColor="#384e78">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Frame CornerRadius="10" BackgroundColor="#AC92EB" Margin="5,10,5,5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label FontSize="30" Margin="0,5,0,0" HorizontalTextAlignment="Center" FontFamily="fuente">Vamos a leer un poco</Label>
+                <Image Source="gusanito"  Grid.Column="1" HeightRequest="100" HorizontalOptions="Center" Margin="0,0,0,100"></Image>
+                <Button WidthRequest="40" HeightRequest="40" BorderRadius="20" Text="&#x2192;"  BackgroundColor="#4fc1e8" BorderWidth="1"  BorderColor="Black" Grid.Column="1" Grid.Row="1" FontFamily="texto" Clicked="Button_Clicked"></Button>
+                <Frame CornerRadius="10" Grid.Row="1" BorderColor="Black" BackgroundColor="#AED984" HasShadow="False">
+                    <Label FontFamily="texto" FontSize="Large" TextColor="White" HorizontalTextAlignment="Center">LECTURA</Label>
+                </Frame>
+            </Grid>
+        </Frame>
+        <Frame CornerRadius="10" BackgroundColor="#4FC1E8" Margin="5,10,5,5" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label FontSize="30" FontFamily="fuente" HorizontalTextAlignment="Center">Pon aprueba tu conocimiento</Label>
+                <Image Source="rosayverde.png" Grid.Column="1" HeightRequest="150"  Margin="0,0,0,90"></Image>
+                <Button WidthRequest="40" HeightRequest="40" BorderRadius="20" Text="&#x2192;" BackgroundColor="#AED984" BorderWidth="1"  BorderColor="Black" Grid.Column="1" Grid.Row="1" FontFamily="texto" Clicked="Button_Clicked_1"></Button>
+                <Frame CornerRadius="10" Grid.Row="1" BackgroundColor="#F285AD" BorderColor="Black" HasShadow="False">
+                    <Label TextColor="White" HorizontalTextAlignment="Center" FontFamily="texto" FontSize="Large">Juego</Label>
+                </Frame>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>
