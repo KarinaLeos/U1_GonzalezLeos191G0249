@@ -1,32 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="U3Diversown.QuizView" NavigationPage.HasBackButton="False" >
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:U3Diversown" x:DataType="local:Juego"
+             x:Class="U3Diversown.QuizView" NavigationPage.HasBackButton="False" x:Name="quiz" >
     
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <Frame CornerRadius="20" Grid.Row="0" Margin="5">
-            <Frame>
-                <Image x:Name="imgImagen" HeightRequest="450"></Image>
-            </Frame>
-        </Frame>
-        <StackLayout  Grid.Row="1" Margin="5,5,5,10">
-        <StackLayout.Resources>
-            <Style TargetType="Button">
-                <Setter Property="HeightRequest" Value="60"/>
-                    <Setter Property="WidthRequest" Value="60"></Setter>
-                    <Setter Property="CornerRadius" Value="30"></Setter>
+    <StackLayout>
+
+
+        <Image  HeightRequest="450" Source="{Binding Imagen}"></Image>
+        <Label  FontSize="Large" Margin="0,10,0,0" HorizontalTextAlignment="Center" Text="{Binding PalabraEscondida}"></Label>
+        
+        <CollectionView Grid.Row="2" VerticalOptions="EndAndExpand" Margin="5,15" ItemsSource="{Binding Abecedario}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="9" Orientation="Vertical" HorizontalItemSpacing="3" VerticalItemSpacing="3"></GridItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="WidthRequest" Value="40"></Setter>
+                    <Setter Property="BackgroundColor" Value="#AC92EB"></Setter>
+                    <Setter Property="HeightRequest" Value="40"></Setter>
+                    <Setter Property="CornerRadius" Value="20"></Setter>
                     <Setter Property="BorderWidth" Value="1"></Setter>
-                    <Setter Property="BorderColor" Value="White"></Setter>
-            </Style>
-        </StackLayout.Resources>
-         <Button x:Name="btnC"  Grid.Column="0" ></Button>
-         <Button x:Name="btn1" Grid.Column="0" Grid.Row="1"></Button>
-         <Button x:Name="btn2"  Grid.Column="1" Grid.Row="0"></Button>
-            <Button x:Name="btn3" Grid.Column="1" Grid.Row="1"></Button>
-        </StackLayout>
-    </Grid>
+                    <Setter Property="BorderColor" Value="Black"></Setter>
+                </Style>
+            </CollectionView.Resources>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Button Command="{Binding Source={x:Reference ventana}, Path=BindingContext.VerificarCommand}" Text="{Binding .}"></Button>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+   
+    </StackLayout>
 </ContentPage>

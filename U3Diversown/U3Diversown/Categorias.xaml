@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:U3Diversown"
+             x:Class="U3Diversown.Categorias" BackgroundColor="White">
+    <ContentPage.Resources>
+        <local:CategoriaToFileConverter x:Key="convertidor"></local:CategoriaToFileConverter>
+    </ContentPage.Resources>
+    
+    <ContentPage.BindingContext>
+        <local:Juego x:Name="Ahorcado"></local:Juego>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <CollectionView ItemsSource="{Binding ECategorias}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                        <Image Source="{Binding ., Converter={StaticResource convertidor}}" WidthRequest="150"></Image>
+                    <BoxView Color="#ed5569" HeightRequest="3" HorizontalOptions="FillAndExpand"></BoxView>
+                        <Label FontFamily="fuente" FontSize="40"  TextColor="Black" Text="{Binding .}"></Label>
+                    <Button WidthRequest="40" HeightRequest="40" BorderRadius="20" Text="&#x2192;" BackgroundColor="#4fc1e8" BorderWidth="1"  BorderColor="Black" Grid.Column="1"  Command="{Binding Source={Reference Ahorcado}, Path=JugarCommand}" CommandParameter="{Binding .}"></Button>
+                    <Label  TextColor = "White" Margin="20"  HorizontalTextAlignment="Center"  Text ="Selecciona tu categoria favorita"></Label>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+    </StackLayout>
+</ContentPage>

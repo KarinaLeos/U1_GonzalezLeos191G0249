@@ -24,7 +24,7 @@ namespace U3Diversown
 
         private void Button_Clicked_1(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new QuizView());
+            Navigation.PushAsync(new Categorias());
         }
     }
 }

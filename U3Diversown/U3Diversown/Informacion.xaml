@@ -7,51 +7,47 @@
     <Frame CornerRadius="10" BackgroundColor="#384e78" Margin="10">
         <ScrollView>
             <StackLayout >
-            <StackLayout.Resources>
-                <ResourceDictionary>
-                    <Style TargetType="Label">
-                        <Setter Property="TextColor" Value="White"></Setter>
-                        <Setter Property="FontFamily" Value="texto"></Setter>
-                        <Setter Property="FontSize" Value="Body"></Setter>
-                    </Style>
-                </ResourceDictionary>
-            </StackLayout.Resources>
-                <Label>Recordemos que las plantas son seres vivos que nacen, crecen, se reproducen y mueren. Las plantas pertenecen al reino vegetal. Se clasifican segun su tamaño</Label>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Label">
+                            <Setter Property="TextColor" Value="White"></Setter>
+                            <Setter Property="FontFamily" Value="texto"></Setter>
+                            <Setter Property="FontSize" Value="15"></Setter>
+                            <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+                        </Style>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+                <Label FontFamily="fuente" FontSize="Large">¿Qué son las plantas?</Label>
+
+                <Grid Margin="0,5,0,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="150"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Image Source="arbol.png"></Image>
-                    <Label Grid.Row="1">
+                    
+                    <Label Margin="0,20" HorizontalTextAlignment="Start">
                         <Label.Text>
-                            Son las plantas de mayor tamaño. Hay de variadas formas y tamaños. Poseen un único tallo, duro y leñoso. 
-                            Hay árboles de hojas caducas, las pierden en invierno para evitar el congelamiento. 
-                            Y los hay de hoja perenne, que renuevan sus hojas a lo largo del año, sin perderlas en invierno, por ejemplo el pino. 
-                            Pueden ser muy longevos.
+                            Las plantas son seres vivientes: nacen, se alimentan, crecen, respiran, se reproducen, envejecen y mueren. Para llevar a cabo estas funciones, la mayoría de las plantas 
+                            ha desarrollado un organismo compuesto de raíces, tallo y hojas. 
+                            Además, muchas de ellas tienen flores, frutos y semillas.
                         </Label.Text>
+
                     </Label>
-                    <Image Source="abs.png" Grid.Column="1"></Image>
-                    <Label Grid.Row="1" Grid.Column="1">
-                        <Label.Text>
-                            Son vegetales más pequeños que los árboles. Sus ramas nacen desde el suelo. Poseen varios tallos, algunos leñosos y otros no. 
-                            Pueden ser de hoja caduca o perenne. 
-                            Hay una gran variedad de especies. Tienen una vida media.
-                        </Label.Text>
-                    </Label>
-                    <Image Source="hierba.png" Grid.Column="2"></Image>
-                    <Label Grid.Row="1" Grid.Column="2">
-                        <Label.Text>
-                            Son pequeñas plantas que sobresalen apenas del suelo. Su tallo es blando y flexible. En general son de corta vida. 
-                            Las herbáceas son cultivadas por el hombre con diversos fines, como alimento o adorno.
-                        </Label.Text>
-                    </Label>
+                    
+                    <Image Source="PartesPlanta.png" Grid.Column="1"></Image>
                 </Grid>
+                
+                <Label>
+                    <Label.Text>
+                        Muchas plantas comienzan siendo pequeñas semillas que caen al suelo y que 
+                        empiezan a germinar cuando se dan las condiciones ambientales apropiadas:
+                        tierra, humedad y calor.
+                    </Label.Text>
+                </Label>
+                <Image Source="Ciclo.png" Margin="0,15,0,0"></Image>
+
+
+
             </StackLayout>
         </ScrollView>
     </Frame>
