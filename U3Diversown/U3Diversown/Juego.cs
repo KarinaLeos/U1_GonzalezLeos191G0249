@@ -14,8 +14,8 @@ namespace U3Diversown
     public class Juego : INotifyPropertyChanged
     {
         QuizView quiz = new QuizView();
-        
-      
+
+
         public Juego()
         {
             VerificarCommand = new Command<char>(Verificar);
@@ -58,9 +58,21 @@ namespace U3Diversown
             }
 
         }
-        public char[] Abecedario
+       
+        public void Jugar(ECategorias obj)
         {
-            get { return "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ".ToCharArray(); }
+            if (quiz == null)
+            {
+                quiz = new QuizView() { BindingContext = this };
+            }
+
+            Mensaje = "";
+            FinJuego = false;
+            Catego = obj;
+            errores = 0;
+            SeleccionarPalabra();
+
+            Application.Current.MainPage.Navigation.PushAsync(quiz);
         }
 
 
@@ -101,20 +113,7 @@ namespace U3Diversown
 
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null));
         }
-        public void Jugar(ECategorias obj)
-        {
-            if(quiz==null)
-            {
-                quiz = new QuizView() { BindingContext = this };
-            }
-
-            Mensaje = "";
-            FinJuego = false;
-            Catego = obj;
-            errores = 0;
-            SeleccionarPalabra();
-            Application.Current.MainPage.Navigation.PushAsync(quiz);
-        }
+     
         public void Verificar(char letra)
         {
             if (palabraAdivinar.Any(x => x == letra))
@@ -145,8 +144,14 @@ namespace U3Diversown
 
             }
         }
-
-    public Array ECategorias
+        public char[] Abecedario
+        {
+            get
+            {
+                return "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ".ToCharArray();
+            }
+        }
+        public Array ECategorias
         {
             get { return Enum.GetValues(typeof(ECategorias)); }
         }

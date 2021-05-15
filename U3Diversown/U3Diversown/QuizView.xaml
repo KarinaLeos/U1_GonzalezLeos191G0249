@@ -4,16 +4,33 @@
              xmlns:local="clr-namespace:U3Diversown" x:DataType="local:Juego"
              x:Class="U3Diversown.QuizView" NavigationPage.HasBackButton="False" x:Name="quiz" >
     
-    <StackLayout>
+    
+        <StackLayout Padding="10">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label TextColor="Black" FontSize="Title">Categoría:</Label>
+            <Label TextColor="#ED5569"  FontSize="Title" Text="{Binding Catego}"></Label>
+            </StackLayout>
+        <Frame CornerRadius="20" WidthRequest="150" HeightRequest="450">
+            <Frame BackgroundColor="#4fc1e8" Background="{Binding Imagen}">
+                <Image  HeightRequest="450" Source="{Binding Imagen}"></Image>
+        </Frame>
+        </Frame>
+        <Label  FontSize="Large" Margin="0,10,0,0" HorizontalTextAlignment="Center" Text="{Binding PalabraEscondida}" TextColor="#ED5569"></Label>
 
-
-        <Image  HeightRequest="450" Source="{Binding Imagen}"></Image>
-        <Label  FontSize="Large" Margin="0,10,0,0" HorizontalTextAlignment="Center" Text="{Binding PalabraEscondida}"></Label>
-        
-        <CollectionView Grid.Row="2" VerticalOptions="EndAndExpand" Margin="5,15" ItemsSource="{Binding Abecedario}">
+        <CollectionView  VerticalOptions="EndAndExpand" Margin="5,15" ItemsSource="{Binding Abecedario}">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Span="9" Orientation="Vertical" HorizontalItemSpacing="3" VerticalItemSpacing="3"></GridItemsLayout>
                 </CollectionView.ItemsLayout>
+            <CollectionView.Style>
+                <Style TargetType="CollectionView">
+                    <Setter Property="IsVisible" Value="True"></Setter>
+                    <Style.Triggers>
+                        <DataTrigger TargetType="CollectionView" Binding="{Binding FinJuego}" Value="True">
+                            <Setter Property="IsVisible" Value="False"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+                </CollectionView.Style>
                 <CollectionView.Resources>
                 <Style TargetType="Button">
                     <Setter Property="WidthRequest" Value="40"></Setter>
@@ -26,11 +43,12 @@
             </CollectionView.Resources>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Button Command="{Binding Source={x:Reference ventana}, Path=BindingContext.VerificarCommand}" Text="{Binding .}"></Button>
+                    <Button Command="{Binding Source={x:Reference quiz}, Path=BindingContext.VerificarCommand}" Text="{Binding .}" CommandParameter="{Binding .}"></Button>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        
-   
+
+        <Label IsVisible="{Binding FinJuego}" Margin="0, 30" Text="{Binding Mensaje}" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="30"
+               TextColor="Black" ></Label>
     </StackLayout>
 </ContentPage>

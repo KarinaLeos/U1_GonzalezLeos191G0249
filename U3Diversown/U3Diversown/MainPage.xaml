@@ -10,8 +10,8 @@
         <StackLayout Margin="25" HorizontalOptions="Center">
             <Image Source="logo2.png" WidthRequest="300"></Image>
             <Label HorizontalOptions="CenterAndExpand" FontSize="45" Margin="0,20,0,0" FontFamily="fuente" HorizontalTextAlignment="Center">Diversown</Label>
-            <Label HorizontalOptions="Center" FontSize="30" Margin="0,30" HorizontalTextAlignment="Center" FontFamily="texto">Sembrando conocimiento</Label>
-            <Button   Text="Plantar semilla" TextColor="White" BackgroundColor="#E06C78" BorderColor="White" BorderWidth="2" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="End" Margin="0,45,0,0" Clicked="Button_Clicked" ></Button>
+            <Label HorizontalOptions="Center" FontSize="30" Margin="0,20" HorizontalTextAlignment="Center" FontFamily="texto">Sembrando conocimiento</Label>
+            <Button   Text="Plantar semilla" TextColor="White" BackgroundColor="#E06C78" BorderColor="White" BorderWidth="2" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="End" Margin="0,0,0,0" Clicked="Button_Clicked" ></Button>
         </StackLayout>
     </Frame>
 
